@@ -1,7 +1,7 @@
 "use strict"; 
 const apiKey = '';
 //api.openweathermap.org/data/2.5/weather?q={city name},{state code},{country code}&appid={API key}
-var url = 'https://api.openweathermap.org/data/2.5/weather?q=';
+var url = 'https://weathertodayapi.herokuapp.com/openweathermap/data/2.5/weather?q=';
 
 function get(url) {
     return new Promise(function(resolve, reject){
@@ -61,8 +61,8 @@ function prepareQueryParams(postcode){
     let query;    
     query = encodeURIComponent(postcode);
     //append the api-key to the query parameter  
-    query += "&appid=";
-    query += apiKey;
+    //query += "&appid=";
+    //query += apiKey;
     return query;
 }
 
